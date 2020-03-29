@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @package excursions_kenya
+ * @package travelogue
  * @version 1.2.3
  */
 /*
@@ -272,7 +272,7 @@ function get_taglines()
     return explode("\n", $taglines);
 }
 
-function excursions_kenya_get_tagline()
+function travelogue_get_tagline()
 {
     $taglines = get_taglines();
     // And then randomly choose a line.
@@ -280,9 +280,9 @@ function excursions_kenya_get_tagline()
 }
 
 // This just echoes the chosen line, we'll position it later.
-function excursions_kenya()
+function travelogue()
 {
-    $chosen = excursions_kenya_get_tagline();
+    $chosen = travelogue_get_tagline();
     $lang   = '';
     if ('en_' !== substr(get_user_locale(), 0, 3)) {
         $lang = ' lang="en"';
@@ -296,8 +296,8 @@ function excursions_kenya()
     );
 }
 
-add_action('wp_footer', 'excursions_kenya_toast');
-function excursions_kenya_toast()
+add_action('wp_footer', 'travelogue_toast');
+function travelogue_toast()
 {
     $taglines = json_encode(get_taglines());
 
@@ -315,7 +315,7 @@ SCRIPT;
 }
 
 // Now we set that function up to execute when the admin_notices action is called.
-add_action('admin_notices', 'excursions_kenya');
+add_action('admin_notices', 'travelogue');
 
 // We need some CSS to position the paragraph.
 function excursion_css()
@@ -346,7 +346,6 @@ function excursion_css()
 	</style>
 	";
 }
-
 add_action('admin_head', 'excursion_css');
 
 function add_theme_scripts()
