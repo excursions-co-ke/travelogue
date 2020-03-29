@@ -5,12 +5,12 @@
  * @version 1.2.3
  */
 /*
-Plugin Name: Excursion Kenya
-Plugin URI: http://wordpress.org/plugins/excursion-kenya/
+Plugin Name: Travelogue
+Plugin URI: https://wp.excursions.co.ke/plugins/travelogue
 Description: Random Travel Taglines
-Author: Mauko Maunde
-Version: 1.2.3
-Author URI: http://osen.co.ke/
+Author: Excursions Kenya
+Version: 1.20.04
+Author URI: http://excursions.co.ke/
 */
 function get_taglines()
 {
