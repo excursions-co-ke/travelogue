@@ -324,7 +324,7 @@ function excursion_css()
 	<style type='text/css'>
 	#excursion {
 		float: right;
-		padding: 35px 20px;
+		padding: 30px 20px;
 		margin: 0;
 		font-size: 15px;
 		line-height: 1.6666;
@@ -342,7 +342,7 @@ function excursion_css()
 			padding-left: 0;
 			padding-right: 0;
 		}
-	}
+    }
 	</style>
 	";
 }
@@ -350,7 +350,7 @@ add_action('admin_head', 'excursion_css');
 
 function add_theme_scripts()
 {
-    wp_enqueue_script("toastr", "https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js");
+    wp_enqueue_script("toastr", "https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js", ['jquery'], time());
     wp_enqueue_style("toastr", "https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css");
 }
 add_action('wp_enqueue_scripts', 'add_theme_scripts');
